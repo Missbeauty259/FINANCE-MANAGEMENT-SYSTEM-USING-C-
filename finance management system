@@ -1,0 +1,42 @@
+# include <iostream>
+using namespace std;
+VOID addincome(int inc){
+    int i;
+    cout<<" enter income"<< endl;
+    cin>>i;
+    inc=inc+i;
+}
+int main (){
+    int income=0,expense=0, balance=0;
+    while (true){
+        cout<<"finance management system"<<endl;
+        cout<<"========================"<<endl;
+        cout<<"1.Add income"<<endl;
+        cout<<"2.Add expense"<<endl;
+        cout<<"3.balance inquery"<<endl;
+        cout<<"4.Exit"<<endl;
+        cout<<"Enter choice:"<<endl;
+        cin>>choice;
+        if(choice==1){
+			//add income
+            system("cls");
+            addincome(income);
+        }
+        else if(choice==2){
+			//add expense  
+        } 
+        else if(choice==2){
+			//calculate balance 
+        } 
+        else if(choice==4){
+			cout<<" best of luck!" <<endl;
+            break;
+        } 
+        else{
+            cout<<" ERROR: INVALID INPUT!"
+        }
+
+    }
+
+
+}

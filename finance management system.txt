@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std;
+void addincome(int& inc){
+    int i;
+    cout <<" Enter income ";
+    cin>>i;
+    inc= inc+i;
+    cout<<"income added successfully!"<<endl;
+    cout<<" "<<endl;
+}
+ void addexpense( int& exp){
+    int e;
+    cout<<"Enter expense: ";
+    cin>>e;
+    exp= exp+e;
+    cout<<"Expense added successfully!"<<endl;
+    cout<<" "<<endl;
+ }
+
+void ballnq(int inc,int exp,int bal){
+    bal= inc-exp;
+    if (bal <0){
+        cout<<"you are in loss of "<< bal<<"rupees!" <<endl;
+        cout<<" "<<endl;
+    }
+    else if(bal>0) {
+        cout <<" you are in profit of "<<bal<<"rupees"<<endl;
+         cout<<" "<<endl;
+    }
+}
+
+int choice;
+int main (){
+ int income=0 ,expense=0 ,balance=0;
+while (true){
+    cout<<"Finance Management System"<<endl;
+		cout<<"=========================="<<endl;
+		cout<<"1.Add Income"<<endl;
+		cout<<"2.Add Expense"<<endl;
+		cout<<"3.Balance Inquery"<<endl;
+		cout<<"4.Exit"<<endl;
+		cout<<"Enter Choice: ";
+        cin>> choice;
+
+        if(choice==1){
+            // add income
+            system("cls");
+            addincome(income);
+        }
+        else if (choice==2){
+            //add expense
+             system("cls");
+              addexpense(expense);
+        }
+        else if (choice==3){
+            // calculate balance 
+        system("cls");
+            ballnq(income,expense,balance);
+        }
+        else if (choice==4){
+            cout<<"Best of luck"<<endl;
+            break;
+        }
+        else{
+        cout<<"Error:invalid input!"<<endl;
+        }
+}
+}
